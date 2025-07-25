@@ -1,0 +1,26 @@
+ALGORITHM Analyse de phrase
+VAR
+  caractère : caractère lu
+  longueur ← 0
+  mots ← 0
+  voyelles ← 0   
+BEGIN 
+  write(" Entrez une phrase se terminant par un point :")
+  read(caractère)
+    WHILE caractère ≠ '.' DO
+        longueur ← longueur + 1
+        IF caractère = 'a' OR caractère = 'e' OR caractère = 'i' OR caractère = 'o' OR caractère = 'u' THEN
+        voyelles ← voyelles + 1
+        ENDIF
+        read(caractère)
+
+
+        IF caractère = ' ' THEN
+            mots ← mots + 1
+        ENDIF
+        read(caractère)
+    ENDWHILE
+    write ("Longueur de la phrase : ", longueur)
+    write ("Nombre de mots : ", mots) 
+    write ("Nombre de voyelles : ", voyelles)
+END
